@@ -1,108 +1,76 @@
-// Typing animation
+// ---------- Scroll Animation ----------
 
-const text="Suprada Rao | Automation Engineer";
-let i=0;
+function reveal(){
 
-function type(){
+const reveals = document.querySelectorAll(".reveal");
 
-if(i<text.length){
+reveals.forEach((el)=>{
 
-document.getElementById("typing").innerHTML+=text.charAt(i);
+const windowHeight = window.innerHeight;
+const elementTop = el.getBoundingClientRect().top;
+const revealPoint = 120;
 
-i++;
-
-setTimeout(type,80);
-
-}
-
-}
-
-type();
-
-
-// Dark Mode
-
-document.getElementById("darkToggle").onclick=function(){
-
-document.body.classList.toggle("dark");
-
-};
-
-
-// Scroll animation
-
-const reveals=document.querySelectorAll(".reveal");
-
-window.addEventListener("scroll",()=>{
-
-reveals.forEach(el=>{
-
-if(el.getBoundingClientRect().top < window.innerHeight-100){
-
+if(elementTop < windowHeight - revealPoint){
 el.classList.add("active");
-
 }
 
 });
 
-});
+}
+
+// Run once when page loads
+window.addEventListener("load", reveal);
+
+// Run when scrolling
+window.addEventListener("scroll", reveal);
 
 
-// Skill chart
 
-const ctx=document.getElementById("skillsChart");
+// ---------- Skills Radar Chart ----------
+
+const canvas = document.getElementById("skillsChart");
+
+if(canvas){
+
+const ctx = canvas.getContext("2d");
 
 new Chart(ctx,{
-
 type:"radar",
-
 data:{
-
-labels:["Java","Python","Node.js","Android","Automation","AI Testing"],
-
+labels:[
+"Java",
+"Python",
+"Node.js",
+"Android",
+"Automation",
+"AI Testing"
+],
 datasets:[{
-
 label:"Skill Level",
-
 data:[85,80,85,80,90,85],
-
-backgroundColor:"rgba(59,130,246,0.3)"
-
+backgroundColor:"rgba(37,99,235,0.25)",
+borderColor:"#2563eb",
+borderWidth:2,
+pointBackgroundColor:"#2563eb"
 }]
+},
+options:{
+responsive:true,
+plugins:{
+legend:{
+display:false
+}
+},
+scales:{
+r:{
+beginAtZero:true,
+max:100,
+ticks:{
+stepSize:20
+}
+}
+}
+}
+});
 
 }
-
-});
-
-
-// GitHub project auto fetch
-
-fetch("https://api.github.com/users/SupzRao/repos")
-
-.then(res=>res.json())
-
-.then(data=>{
-
-const container=document.getElementById("projects-container");
-
-data.slice(0,6).forEach(repo=>{
-
-const card=document.createElement("div");
-
-card.className="project-card";
-
-card.innerHTML=`
-
-<h3>${repo.name}</h3>
-
-<p>${repo.description || "GitHub repository project"}</p>
-
-<a href="${repo.html_url}" target="_blank">View Project →</a>
-
-`;
-
-container.appendChild(card);
-
-});
-
-});
