@@ -8,298 +8,115 @@
 
 <title>Suprada Rao | Automation Engineer</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<h2>Suprada Rao</h2>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+
+<button id="darkToggle">🌙</button>
+
+</nav>
+
+
 <!-- HERO -->
 
 <header class="hero">
 
-<h1>Suprada Rao</h1>
+<h1 id="typing"></h1>
 
 <p>
-Senior Automation Engineer • AI Voice Testing • Android Development
+Automation Engineer specializing in AI Voice Testing, Android Automation and Scalable Testing Frameworks
 </p>
 
-<div class="buttons">
-<a href="resume.pdf" download class="btn">Download Resume</a>
-<a href="#contact" class="btn secondary">Contact Recruiter</a>
-</div>
+<a href="assets/resume.pdf" download class="btn">Download Resume</a>
 
 </header>
 
 
 <!-- ABOUT -->
 
-<section class="about reveal">
+<section id="about" class="glass reveal">
 
-<h2>Professional Summary</h2>
-  
-<ul class="summary-points">
-<li>9+ Years Automation Engineering Experience</li>
-<li>Expert in Mobile Automation & Voice Assistant Testing</li>
-<li>Java • Node.js • Python • Android</li>
-<li>Automation Framework Architecture</li>
-<li>Performance & Voice Recognition Validation</li>
-</ul>
+<h2>About</h2>
+
 <p>
 
-Senior Automation Engineer with 9+ years of experience designing and implementing 
-scalable automation frameworks for mobile platforms, voice assistants, and AI-driven 
-applications. Expertise in test automation, Android development, and backend tooling 
-using Java, Node.js, and Python. Proven ability to build intelligent testing solutions 
-for large-scale mobile ecosystems, including voice recognition validation, performance 
-analysis, and device-level diagnostics. Experienced in developing end-to-end automation 
-tools, optimizing system reliability, and improving test coverage for complex mobile 
-platforms.
+Automation Engineer with 9+ years experience building scalable automation frameworks,
+AI voice testing platforms and Android automation tools. Currently working at Samsung
+Research & Development developing testing infrastructure for Galaxy AI voice features.
 
 </p>
 
-</section>  
+</section>
+
 
 <!-- SKILLS -->
 
-<section class="skills">
+<section id="skills" class="glass reveal">
 
 <h2>Technical Skills</h2>
-<canvas id="skillsChart" width="400" height="400"></canvas>
-<div class="skills-grid">
 
-<div class="skill">
-<span>Java</span>
-<div class="bar"><div class="progress java"></div></div>
-</div>
-
-<div class="skill">
-<span>Node.js</span>
-<div class="bar"><div class="progress node"></div></div>
-</div>
-
-<div class="skill">
-<span>Android Development</span>
-<div class="bar"><div class="progress android"></div></div>
-</div>
-
-<div class="skill">
-<span>Python</span>
-<div class="bar"><div class="progress python"></div></div>
-</div>
-
-<div class="skill">
-<span>Automation Frameworks</span>
-<div class="bar"><div class="progress automation"></div></div>
-</div>
-
-<div class="skill">
-<span>AI / Voice Testing</span>
-<div class="bar"><div class="progress ai"></div></div>
-</div>
-
-</div>
+<canvas id="skillsChart"></canvas>
 
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- PROJECTS -->
 
-<section class="experience">
+<section id="projects" class="reveal">
 
-<h2>Work Experience</h2>
+<h2>GitHub Projects</h2>
 
-<div class="timeline">
-
-<div class="timeline-item">
-<div class="timeline-content">
-
-<h3>Chief Engineer</h3>
-<h4>Samsung Research & Development</h4>
-<span>2019 – Present</span>
-
-<ul>
-<li>Built automation frameworks for Galaxy AI voice features</li>
-<li>Developed Node.js tools for ASR validation</li>
-<li>Implemented WER & SRR analysis systems</li>
-<li>Collected performance metrics (battery, CPU, memory)</li>
-</ul>
-
-</div>
-</div>
-
-
-<div class="timeline-item">
-<div class="timeline-content">
-
-<h3>IoT Consultant</h3>
-<h4>Widas India Pvt Ltd</h4>
-<span>2015 – 2019</span>
-
-<ul>
-<li>Developed Android IoT applications</li>
-<li>Built Java automation testing tools</li>
-<li>Optimized applications for multiple Android devices</li>
-</ul>
-
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="projects reveal">
-
-<h2>Featured Projects</h2>
-
-<div class="project-grid">
-
-<div class="project-card">
-
-<h3>Galaxy Intelligence Tool Automation (GITA)</h3>
-
-<p>
-Node.js automation framework validating Galaxy AI voice features. 
-Automates WER and SRR evaluation and collects device performance metrics.
-</p>
-
-<div class="tech-tags">
-<span>Node.js</span>
-<span>Automation</span>
-<span>AI Testing</span>
-</div>
-
-</div>
-
-
-<div class="project-card">
-
-<h3>Bixby Regression Tool (BRT)</h3>
-
-<p>
-Java multithreaded CLI tool for stress testing Bixby servers across
-multiple languages with performance monitoring.
-</p>
-
-<div class="tech-tags">
-<span>Java</span>
-<span>Multithreading</span>
-<span>Automation</span>
-</div>
-
-</div>
-
-
-<div class="project-card">
-
-<h3>BIXBY End-to-End Automation Tool (BEAT)</h3>
-
-<p>
-Android automation application executing voice driven
-test scenarios with UI validation and log verification.
-</p>
-
-<div class="tech-tags">
-<span>Android</span>
-<span>Voice AI</span>
-<span>Automation</span>
-</div>
-
-</div>
-
-
-<div class="project-card">
-
-<h3>ML Device State Predictor</h3>
-
-<p>
-Machine learning system analyzing camera images
-to detect IoT device states such as smart bulb or door lock.
-</p>
-
-<div class="tech-tags">
-<span>Machine Learning</span>
-<span>IoT</span>
-<span>Computer Vision</span>
-</div>
-
-</div>
-
-
-<div class="project-card">
-
-<h3>Cidaas Authenticator</h3>
-
-<p>
-Secure mobile authentication system implementing
-Face Recognition, Voice Authentication and NFC verification.
-</p>
-
-<div class="tech-tags">
-<span>Android</span>
-<span>Security</span>
-<span>Biometrics</span>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- EDUCATION -->
-
-<section class="education reveal">
-
-<h2>Education</h2>
-
-<div class="edu-card">
-
-<h3>Bachelor of Technology (Computer Science)</h3>
-
-<p>
-Nitte Mahalinga Adyanthaya Memorial Institute of Technology  
-Udupi, India
-</p>
-
-</div>
+<div id="projects-container"></div>
 
 </section>
 
 
 <!-- CONTACT -->
 
-<section id="contact" class="contact reveal">
+<section id="contact" class="glass reveal">
 
 <h2>Contact Recruiter</h2>
 
 <form action="https://formspree.io/f/mbdzakjn" method="POST">
 
-<input type="text" name="name" placeholder="Your Name" required>
-
+<input type="text" name="name" placeholder="Name" required>
 <input type="email" name="email" placeholder="Email" required>
 
 <textarea name="message" placeholder="Message"></textarea>
 
-<button type="submit">Send Message</button>
+<button type="submit">Send</button>
 
 </form>
 
 </section>
 
-
 <footer>
 
-<p>© Suprada Rao</p>
+© Suprada Rao
 
 </footer>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
