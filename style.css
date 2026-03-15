@@ -131,3 +131,37 @@ transition: transform 0.4s;
 .timeline-content:hover {
 transform: scale(1.05);
 }
+
+.skills-grid{
+max-width:800px;
+margin:auto;
+}
+
+.skill{
+margin:20px 0;
+}
+
+.bar{
+background:#eee;
+height:12px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress{
+height:100%;
+background:linear-gradient(90deg,#4CAF50,#00C9A7);
+width:0;
+animation:load 2s forwards;
+}
+
+.java{ width:90%; }
+.node{ width:85%; }
+.android{ width:80%; }
+.python{ width:75%; }
+.automation{ width:95%; }
+.ai{ width:85%; }
+
+@keyframes load{
+from{ width:0; }
+}
