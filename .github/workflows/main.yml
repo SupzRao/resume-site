@@ -17,7 +17,10 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v4
-
+      - name: Replace secret in HTML
+        run: |
+          sed -i "s|__FORMSPREE_URL__|${{ secrets.FORMSPREE_URL }}|g" index.html
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
