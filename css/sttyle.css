@@ -1,10 +1,17 @@
-body{
 
-font-family:'Inter',sans-serif;
+body{
 margin:0;
-background:linear-gradient(120deg,#1e293b,#0f172a);
+font-family:'Inter',sans-serif;
 color:white;
 
+/* AI gradient background */
+
+background: radial-gradient(circle at 20% 30%, #1e3a8a, transparent 40%),
+            radial-gradient(circle at 80% 70%, #9333ea, transparent 40%),
+            radial-gradient(circle at 50% 50%, #06b6d4, transparent 35%),
+            #020617;
+
+background-attachment:fixed;
 }
 
 /* NAVBAR */
