@@ -165,3 +165,73 @@ animation:load 2s forwards;
 @keyframes load{
 from{ width:0; }
 }
+.tech-stack{
+padding:70px 20px;
+text-align:center;
+}
+
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.tech-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.tech-card:hover{
+transform:translateY(-6px);
+}
+
+.tech-card i{
+font-size:35px;
+color:#4facfe;
+margin-bottom:10px;
+}
+
+
+
+.featured-projects{
+padding:80px 20px;
+background:#f6f7fb;
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
+
+.project-card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.tags{
+margin-top:15px;
+}
+
+.tags span{
+background:#e8f2ff;
+padding:5px 10px;
+border-radius:5px;
+margin-right:5px;
+font-size:12px;
+}
